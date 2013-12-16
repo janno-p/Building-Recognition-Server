@@ -2,6 +2,7 @@ import urllib
 import webapp2
 import json
 import login
+import building
 
 from google.appengine.api import urlfetch
 
@@ -75,4 +76,5 @@ application = webapp2.WSGIApplication([
   ('/check_location', CheckLocation),
   ('/login', login.Login),
   ('/createuser', login.CreateUser),
+  ('/addtag', building.AddBuildingTag),
 ], debug=True)
