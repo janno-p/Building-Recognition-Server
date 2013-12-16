@@ -1,6 +1,7 @@
 import urllib
 import webapp2
 import json
+import login
 
 from google.appengine.api import urlfetch
 
@@ -72,4 +73,6 @@ class CheckLocation(webapp2.RequestHandler):
 application = webapp2.WSGIApplication([
   ('/', MainPage),
   ('/check_location', CheckLocation),
+  ('/login', login.Login),
+  ('/createuser', login.CreateUser),
 ], debug=True)
